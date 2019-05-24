@@ -16,11 +16,13 @@ class FindPlaceScreen extends Component {
         places.once('value', (items) => {this.props.createData(items, this.props.uid)}, (err) => {console.log(err)})
     }
 
-    // componentwillUpdate() {
-    //     var place = Fire.database().ref('places')
-    //     place.once('value', (items)=>{this.props.createData(items, this.props.user.uid)}, (err)=> {console.log(err);
-    //     })
-    // }
+   
+
+    componentWillUpdate() {
+        var places = Fire.database().ref('places')
+
+        places.once('value', (items) => {this.props.createData(items, this.props.uid)}, (err) => {console.log(err);})
+    }
 
     constructor(props) {
         super(props)
