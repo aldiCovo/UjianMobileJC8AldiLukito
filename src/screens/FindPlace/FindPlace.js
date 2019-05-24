@@ -10,11 +10,11 @@ import {createData} from '../../store/actions/places'
 class FindPlaceScreen extends Component {
 
     // Yang Render data place berdasarkan uid dari reducer saat ada perubahan
-    componentDidMount(){
-        var places = Fire.database().ref('places')
-        // ambil semua data di firebase, lempar ke redux
-        places.once('value', (items) => {this.props.createData(items, this.props.uid)}, (err) => {console.log(err)})
-    }
+    // componentDidMount(){
+    //     var places = Fire.database().ref('places')
+    //     // ambil semua data di firebase, lempar ke redux
+    //     places.once('value', (items) => {this.props.createData(items, this.props.uid)}, (err) => {console.log(err)})
+    // }
 
    
 
